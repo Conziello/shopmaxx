@@ -58,7 +58,7 @@ function App() {
             <div className="product">
               <img className="product-image" src="images/d2.jpg" alt="product" />
               <div className="product-name">
-                <a href="product.html">Slim beige dress</a>
+                <a href="product.html">Fitting beige dress</a>
               </div>
               <div className="product-brand">Nelly</div>
               <div className="product-price">$90</div>
@@ -69,7 +69,7 @@ function App() {
             <div className="product">
               <img className="product-image" src="images/d3.jpg" alt="product" />
               <div className="product-name">
-                <a href="product.html">White Shirt</a>
+                <a href="product.html">White dress</a>
               </div>
               <div className="product-brand">Nelly</div>
               <div className="product-price">$60</div>
