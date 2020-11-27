@@ -1,4 +1,6 @@
-import logo from './logo.svg';
+import React from 'react';
+import data from './data';
+import {BrowserRouter, Route, route} from 'react-router-dom';
 import './App.css';
 
 function App() {
@@ -13,6 +15,7 @@ function App() {
   }
 
   return (
+    <BrowserRouter>
     <div className="grid-container">
     <header className="header">
       <div className="brand">
@@ -42,73 +45,27 @@ function App() {
     </aside>
     <main className="main">
       <div className="content">
+        <Route path="/" exact={true} component={HomeScreen}/>
+        <Route path="/products/:id" component={ProductScreen}/>
+        
         <ul className="products">
+         
+         {
+         data.products.map(product =>
           <li>
-            <div className="product">
-              <img className="product-image" src="images/d1.jpg" alt="product" />
-              <div className="product-name">
-                <a href="product.html">Red dinner dress</a>
-              </div>
-              <div className="product-brand">amiko</div>
-              <div className="product-price">$60</div>
-              <div className="product-rating">4.5 Stars (10 Reviews)</div>
+          <div className="product">
+            <img className="product-image" src={product.image} alt="product" />
+            <div className="product-name">
+              <a href="product.html">
+                {product.name}
+              </a>
             </div>
+         <div className="product-brand">{product.brand}</div>
+         <div className="product-price">${product.price}</div>
+            <div className="product-rating">{product.rating} Stars ({product.numReviews} Reviews)</div>
+          </div>
           </li>
-          <li>
-            <div className="product">
-              <img className="product-image" src="images/d2.jpg" alt="product" />
-              <div className="product-name">
-                <a href="product.html">Fitting beige dress</a>
-              </div>
-              <div className="product-brand">Nelly</div>
-              <div className="product-price">$90</div>
-              <div className="product-rating">5 Stars (10 Reviews)</div>
-            </div>
-          </li>
-          <li>
-            <div className="product">
-              <img className="product-image" src="images/d3.jpg" alt="product" />
-              <div className="product-name">
-                <a href="product.html">White dress</a>
-              </div>
-              <div className="product-brand">Nelly</div>
-              <div className="product-price">$60</div>
-              <div className="product-rating">5 Stars (10 Reviews)</div>
-            </div>
-          </li>
-          <li>
-            <div className="product">
-              <img className="product-image" src="images/d4.jpg" alt="product" />
-              <div className="product-name">
-                <a href="product.html">Blue bandage dress</a>
-              </div>
-              <div className="product-brand">Nimy</div>
-              <div className="product-price">$40</div>
-              <div className="product-rating">4.5 Stars (10 Reviews)</div>
-            </div>
-          </li>
-          <li>
-            <div className="product">
-              <img className="product-image" src="images/d5.jpg" alt="product" />
-              <div className="product-name">
-                <a href="product.html">Floral skater dress</a>
-              </div>
-              <div className="product-brand">amiko</div>
-              <div className="product-price">$55</div>
-              <div className="product-rating">4.5 Stars (10 Reviews)</div>
-            </div>
-          </li>
-          <li>
-            <div className="product">
-              <img className="product-image" src="images/d6.jpg" alt="product" />
-              <div className="product-name">
-                <a href="product.html">Black skater dress</a>
-              </div>
-              <div className="product-brand">amiko</div>
-              <div className="product-price">$60</div>
-              <div className="product-rating">4.5 Stars (10 Reviews)</div>
-            </div>
-          </li>
+         )}
 
         </ul>
       </div>
@@ -118,6 +75,9 @@ function App() {
       All right reserved.
     </footer>
   </div>
+
+  </BrowserRouter>
+
   );
 }
 
