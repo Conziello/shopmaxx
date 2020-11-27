@@ -2,11 +2,12 @@ import React from 'react';
 
 function ProductScreen (props){
 
-    return
+    return(
      <div>
         ProductScreen
     </div>
+    );
 }
 
 
-export default ProsuctScreen;
+export default ProductScreen;
