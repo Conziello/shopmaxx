@@ -7,6 +7,9 @@ body{
   height: 100vh;
   margin: 0;
 }
+#root {
+  height: 100%;
+}
 .grid-container{
   display: grid;
   grid-template-areas: 
@@ -57,7 +60,7 @@ a{
   text-decoration: none;
 }
 a:hover{
-  color:  #DAF7A6; 
+  color: #900C3F; 
 
 }
 /* Home Screen */

@@ -31,7 +31,7 @@ export default {
         numReviews: 8
       }, 
       {
-        _id: '1',
+        _id: '4',
         name: 'Slim Shirt',
         category: 'Shirts',
         image: '/images/d4.jpg',
@@ -41,7 +41,7 @@ export default {
         numReviews: 10
       },
       {
-        _id: '2',
+        _id: '5',
         name: 'Fit Shirt',
         category: 'Shirts',
         image: '/images/d5.jpg',
@@ -51,7 +51,7 @@ export default {
         numReviews: 5
       },
       {
-        _id: '3',
+        _id: '6',
         name: 'Best Pants',
         category: 'Pants',
         image: '/images/d6.jpg',
