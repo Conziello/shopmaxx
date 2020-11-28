@@ -42,7 +42,7 @@ function App() {
         <li>
           <a href="index.html">Hair and accessories</a>
         </li>
-
+  
       </ul>
     </aside>
     <main className="main">

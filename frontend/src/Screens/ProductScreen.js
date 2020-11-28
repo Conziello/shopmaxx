@@ -7,10 +7,10 @@ console.log(props.match.params.id);
 const product = data.products.find(x=> x._id ===props.match.params.id);
     return<div>
 
-       <div>
+       <div className="back-to-result">
        <Link to="/">Back to result</Link>
            </div> 
-           <div className='details'> 
+           <div className="details"> 
        <div className="details-image">
            <img src={product.image} alt="product"></img>
        </div>
@@ -23,9 +23,9 @@ const product = data.products.find(x=> x._id ===props.match.params.id);
                    {product.rating} stars({product.numReviews}Reviews)
                </li>
                <li>
-                   <p>
+                   <b>
                        {product.price}
-                   </p>
+                   </b>
                </li>
                <li>
                    Description
@@ -35,6 +35,33 @@ const product = data.products.find(x=> x._id ===props.match.params.id);
                </li>
            </ul>
        </div>
+       <div className="details-action">
+<ul>
+    <li>Price:
+        {product.price}
+        </li>
+        <li>
+            status:
+            {product.status}
+            </li>
+        <li>
+
+            Qty:
+            <select>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select>
+        </li>
+        <li>
+            <button className="button primary">Add to cart</button>
+        </li>
+
+</ul>
+
+        </div>
         </div>
         </div>
         
